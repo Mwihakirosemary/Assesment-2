@@ -12,7 +12,7 @@ fun main(){
     println(m)
 
     var savings = SavingsAccount("35757385","kotlin account",5000,3)
-    savings.withdrawals
+    println(savings.withdrawals)
 
     var pdct = Product("Apple",3.2,50,"Vegetables")
     var pdct1 = Product("Soap",10.2,100,"Hygiene")
@@ -63,7 +63,8 @@ class SavingsAccount(accountNumber: String,accountName: String,balance: Int,var 
     fun withdraw(){
         var x = 0
         if (withdrawals < 4){
-            println(withdrawals)
+            withdrawals++
+
         }
     }
 }
