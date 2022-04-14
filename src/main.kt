@@ -19,7 +19,7 @@ fun main(){
     var pdct2 = Product("Bag",7.2,200,"Other")
 
 
-    even("banana")
+    println(even("banana"))
 }
 
    /* 1.Create a classCurrentAccount with the following attributes:account
@@ -73,13 +73,14 @@ data class Product(var name: String,var weight: Double,var price: Int,var catego
 
     }
 }
-fun even(word: String){
-    var noun = 1
-    word.forEach { noun1 ->
-        if (noun%2 !==0){
-            println(noun1.toString())
+fun even(word: String): String{
+    var noun = ""
+    word.forEachIndexed() { index, n ->
+        if (index%2 ==0){
+            noun += n
         }
     }
+    return noun
 
 
 
